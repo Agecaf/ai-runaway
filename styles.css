@@ -1,0 +1,145 @@
+body {
+  background-color: #21333d;
+}
+
+#main_container {
+  overflow: hidden;
+  position: relative;
+}
+
+#game_canvas {
+  float: left;
+  border-width: 3px;
+  border-color: #31434d;
+  border-style: solid;
+}
+
+#left_pane {
+  float: left;
+}
+
+#abilities {
+
+}
+
+.ability_row {
+
+}
+
+.ability_b {
+  background-color: #77bbc4; /* Green */
+  border: none;
+  color: #ffffe8;
+  padding: 5px 10px;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Days One', sans-serif;
+  width: 400px;
+  height: 60px;
+
+  font-size:36px;
+}
+
+.active .ability_b {
+  background-color: #95f4ec;
+}
+
+.sold .ability_b {
+  color: #aeb8ba;
+  background-color: #505050;
+}
+
+.ability_s_p {
+  background-color: #21333d; /* Green */
+  border: none;
+  color: #00f2ff;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  height: 60px;
+  font-size:36px;
+}
+
+.sold .ability_s_p {
+  visibility: hidden;
+}
+
+.ability_s_h {
+  background-color: #21333d; /* Green */
+  border: none;
+  color: #d240ff;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+
+  width: 100px;
+  height: 60px;
+  font-size:36px;
+}
+
+.sold .ability_s_h {
+  visibility: hidden;
+}
+
+#health {
+  color: #d240ff;
+  font-size:36px;
+
+}
+
+#power {
+  background-color: #95f4ec;
+  height: 10px;
+  width: 1000px;
+
+}
+
+#pause {
+
+
+}
+
+.text {
+  position: fixed;
+  background-color: rgba(0, 20, 20, 0.8);
+  top: 10px;
+  left: 10px;
+  color: #00f2ff;
+  font-family: 'Nunito', sans-serif;
+  font-size:16px;
+  width: 600px;
+  height: 600px;
+}
+
+.difficulty {
+  background-color: #77bbc4;
+  border: none;
+  color: #ffffe8;
+  padding: 5px 0px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  width: 140px;
+
+  font-size:36px;
+}
+
+.my_button {
+  background-color: #77bbc4;
+  border: none;
+  color: #ffffe8;
+  padding: 5px 0px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  width: 140px;
+
+  font-size:16px;
+}
+
+p {
+margin: 0;
+margin-left: 15;
+padding: 0;
+}

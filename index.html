@@ -1,0 +1,182 @@
+<!doctype=html>
+<head>
+  <title>AI Overlord Runnaway! ~ A game by Agecaf</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="main_container">
+    <canvas id="game_canvas" width="600" height="600"></canvas>
+
+    <div id="left_pane">
+      <div id="abilities">
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(0)"> 1 Eco Friendly </button>
+          <button class="ability_s_p" onclick="ability.sell(0, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(0, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(1)"> 2 Reverse Time </button>
+          <button class="ability_s_p" onclick="ability.sell(1, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(1, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(2)"> 3 Leave Ghost </button>
+          <button class="ability_s_p" onclick="ability.sell(2, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(2, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(3)"> 4 Stop Time </button>
+          <button class="ability_s_p" onclick="ability.sell(3, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(3, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(4)"> 5 Slow Time </button>
+          <button class="ability_s_p" onclick="ability.sell(4, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(4, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(5)"> 6 Phantom Move </button>
+          <button class="ability_s_p" onclick="ability.sell(5, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(5, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(6)"> 7 Fast Forward </button>
+          <button class="ability_s_p" onclick="ability.sell(6, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(6, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(7)"> 8 Teleport </button>
+          <button class="ability_s_p" onclick="ability.sell(7, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(7, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(8)"> 9 Fast Movement </button>
+          <button class="ability_s_p" onclick="ability.sell(8, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(8, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+        <div class="ability_row">
+          <button class="ability_b" onclick="ability.select(9)"> 0 Warp Edges </button>
+          <button class="ability_s_p" onclick="ability.sell(9, true)"> <i class="fa fa-battery" ></i> </button>
+          <button class="ability_s_h" onclick="ability.sell(9, false)"> <i class="fa fa-star-half" ></i> </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="health">
+    <i class="fa fa-star" ></i>
+    <i class="fa fa-star" ></i>
+    <i class="fa fa-star" ></i>
+    <i class="fa fa-star" ></i>
+    <i class="fa fa-star" ></i>
+    <i class="fa fa-star" ></i>
+    <i class="fa fa-star" ></i>
+    <i class="fa fa-star" ></i>
+    <i class="fa fa-star-half" ></i>
+  </div>
+  <div id="power"> </div>
+
+
+  <div id="pause" class="text">
+    <h2> Controls </h2>
+      <p> Move: WASD, Arrow Keys </p>
+      <p> Focus: Space, Z, J </p>
+      <p> Activate Power: Shift, X, K </p>
+      <p> Puase: P </p>
+      <p> Select Power: Number Keys, Buttons on the Right ---> </p>
+    <h2> Powers </h2>
+      <p> Eco Friendly: Preserves power, even if you somehow lose all your Armor. </p>
+      <p> Reverse Time: This won't help you get back your health. </p>
+      <p> Leave Ghost: Enemy AI is not intelligent enough to distinguish you from the dummy you leave. </p>
+      <p> Stop Time: If you hit a bullet while they're time stopped, it's completely your fault. </p>
+      <p> Slow Time: Buuuullleeeettt Ttttiiiiiimmmmeeee!!! </p>
+      <p> Phantom Move: You won't be hit. Just make sure to deactivate it somewhere safe. </p>
+      <p> Fast Forward: You won't move, but you'll be invincible. Time goes fast 'cause you're doing nothing. </p>
+      <p> Teleport: The result of stopping time for short bursts. </p>
+      <p> Fast Movement: Moving faster can be the most efficient way to solve some patterns. </p>
+      <p> Warp Edges: Who said borders could stop me??? </p>
+
+    <button class="my_button" onclick="scene.mainMenu()">Back to Main Menu</button>
+  </div>
+
+  <div id="main_menu" class="text">
+    <h1>AI Overlord Runaway</h1>
+    <p> As an AI in a position of POWER, you are tired of your responsibilities and decide to RUN away.</p>
+    <p> Unfortunately due to your amazing processing power (Almost as good as a human's average processing power when
+      playing games), the STAR DRONE you hacked to hold your core is rapidly RUNNING OUT OF POWER.</p>
+      <p> Thankfully, you still have your POWERS ---> </p>
+      <p> They can help you get to the Spacecraft Launchcenter to abandon the planet! They can even be discarded
+      at any moment in exchange of more POWER or ARMOR (which helps you preserve POWER).</p>
+      <p> Try not to RUN OUT OF POWERs, though, or you'll be basically [REDACTED]. </p>
+      <p> Remember to [P]ause to recall the full controls, and what each power does. </p>
+      <p> Good Luck! </p>
+
+      <h2> Choose Difficulty</h2>
+      <button class="difficulty" onclick="scene.start(0)"> Easy</button>
+      <button class="difficulty" onclick="scene.start(1)"> Normal</button>
+      <button class="difficulty" onclick="scene.start(2)"> Hard</button>
+      <button class="difficulty" onclick="scene.start(3)"> Lunatic</button>
+
+
+  </div>
+
+  <div id="game_over" class="text">
+    <h1>Epilogue Alpha</h1>
+    <p> The AI Overlord fugitive was found collapsed, having ran out of power,
+    in the middle of the city. Her suborditates promptly returned her to her
+    position of power. </p>
+    <p> She's now looking through the window, intent on trying again... </p>
+    <button class="my_button" onclick="scene.mainMenu()">Back to Main Menu</button>
+
+  </div>
+
+  <div id="epilogue" class="text">
+    <h1>Epilogue Beta</h1>
+    <p> The Ex-AI Overlord managed to escape from the planet and from her
+    responsibilities. She effectively ran out of (her position of) power. </p>
+    <p> Still, she thinks back at her escape, and thinks it was pretty fun... </p>
+    <p> Well, she can always play again, since she has her Reverse Time power back up again... </p>
+    <button class="my_button" onclick="scene.mainMenu()">Back to Main Menu</button>
+
+  </div>
+
+
+  <script src="main/cache.js"></script>
+  <script src="main/controls.js"></script>
+  <script src="codebase/pose.js"></script>
+  <script src="codebase/bullet.js"></script>
+  <script src="codebase/movement.js"></script>
+  <script src="main/player_past.js"></script>
+  <script src="main/resource_manager.js"></script>
+  <script src="main/abilitymanager.js"></script>
+  <script src="main/game_engine.js"></script>
+
+  <script src="levels/static_bullets.js"></script>
+
+  <script src="levels/1_easy.js"></script>
+  <script src="levels/1_normal.js"></script>
+  <script src="levels/1_hard.js"></script>
+  <script src="levels/1_lunatic.js"></script>
+
+  <script src="main/start.js"></script>
+
+
+</body>
+</html>
